@@ -1,0 +1,11 @@
+<img
+(load)="isLoaded()" 
+src="{{ url }}" 
+alt="" 
+class="h-52 w-full object-cover animate__animated animate__fadeIn"
+[ngStyle]="{ display: loaded ? '' : 'none' }">
+
+<div *ngIf="!loaded" role="status" class="flex justify-center">
+  <img src="assets/loader.svg" alt="" srcset="">
+  <span class="sr-only">Loading...</span>
+</div>

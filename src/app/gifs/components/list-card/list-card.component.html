@@ -1,0 +1,7 @@
+<div class="w-80 bg-slate-100 p-3 rounded-xl my-1 mx-1">
+  <app-shared-lazy-image [url]="gif.images.downsized_medium.url"></app-shared-lazy-image>
+  <!-- <img src="{{ gif.images.downsized_medium.url}}" alt="" class="h-52 w-full object-cover"> -->
+  <ul class="mt-3 flex flex-wrap text-gray-600">
+    <li class="text-xs">{{ gif.title || 'No title' }}</li>
+  </ul>
+</div>

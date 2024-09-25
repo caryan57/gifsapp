@@ -1,0 +1,8 @@
+<div class="bg-white">
+  <div [class]="gifs.length > 0 ? 'flex' : 'flex h-screen items-center'">
+    <!-- Search box -->
+    <app-gifs-search-box class="w-80 lg:w-full mt-4 my-0 mx-auto"></app-gifs-search-box>
+  </div>
+    <!-- Gifs List -->
+   <app-gifs-list [gifsList]="gifs"></app-gifs-list>
+</div>
