@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
-import { environments } from '../../../environments/environments';
 import { Gif, SearchResponse } from '../interfaces/gifs.interfaces';
-import { Subscription } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +10,8 @@ import { Subscription } from 'rxjs';
 export class GifsService {
 
   private _tagsRecord: string[] = [];
-  private GIHPY_API_KEY: string = environments.giphy_api_key;
-  private GIPHY_URL: string = 'http://api.giphy.com/v1/gifs';
+  private GIHPY_API_KEY: string = environment.giphy_api_key;
+  private GIPHY_URL: string = 'https://api.giphy.com/v1/gifs';
   public _gifsList: Gif[] = [];
 
   // Inyectamos un servicio de Angular para manejar las peticiones http
